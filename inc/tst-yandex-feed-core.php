@@ -222,7 +222,8 @@ class La_Yandex_Feed_Core {
 			}
 			
 			$query->query_vars['post_type'] = $pt;
-			
+		    
+			$query->query_vars['post_status'] = 'publish';
 			if($is_turbo) {
 			    $feed_items_limit_option = (int)get_option('layf_feed_items_limit', '');
 			    if($feed_items_limit_option > 0) {
