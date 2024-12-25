@@ -17,7 +17,7 @@ class TstYandexNewsHooks {
             return;
         }
 
-        if ( wp_is_post_revision( $post_id ) ) {
+        if ( wp_is_post_revision( $post_id ) || 'publish' !== get_post_status($post_id )  ) {
             return;
         }
 
